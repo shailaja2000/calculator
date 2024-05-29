@@ -1,0 +1,73 @@
+<html>
+<head>
+<style>
+body
+{
+  background-color:rgb(156,250,220);
+  color:green;
+  text-align: center;
+  
+}
+table, th, td
+{
+ margin: auto;
+ width: 400px;
+ color:rgb(210,255,180)
+ border: 2px solid;
+ padding: 10px;
+ box-shadow: 0px 0px 10px 1px rgb(165,165,165);
+ background-color:rgb(10,10,60);
+
+}
+</style>
+<script>
+function ac()
+{
+ document.getElementById("res").value="";
+}
+function show(input)
+{
+ document.getElementById("res").value+=input;
+}
+function calci()
+{
+ var output=eval(document.getElementById("res").value);
+ document.getElementById("res").value=output;
+}
+</script>
+</head>
+<body>
+
+<table border="2" >
+<caption><h3 style="color:red;">Simple calculator</h3></caption>
+<tr>
+<td colspan="3"><input type="text" id="res"></td>
+<td align="center"><button type="button" onclick=ac()>AC</button></td>
+</tr>
+<tr>
+<td style=color:yellow; align="center"><button type="button" onclick=show('1')>1</button></td>
+<td align="center"><button type="button" onclick=show('2')>2</button></td>
+<td align="center"><button type="button" onclick=show('3')>3</button></td>
+<td align="center"><button type="button" onclick=show('+')>+</button></td>
+</tr>
+<tr>
+<td align="center"><button type="button" onclick=show('4')>4</button></td>
+<td align="center"><button type="button" onclick=show('5')>5</button></td>
+<td align="center"><button type="button" onclick=show('6')>6</button></td>
+<td align="center"><button type="button" onclick=show('-')>-</button></td>
+</tr>
+<tr>
+<td align="center"><button type="button" onclick=show('7')>7</button></td>
+<td align="center"><button type="button" onclick=show('8')>8</button></td>
+<td align="center"><button type="button" onclick=show('9')>9</button></td>
+<td align="center"><button type="button" onclick=show('*')>*</button></td>
+</tr>
+<tr>
+<td align="center"><button type="button" onclick=show('0')>0</button></td>
+<td align="center"><button type="button" onclick=show('%')>%</button></td>
+<td align="center"><button type="button" onclick=show('/')>/</button></td>
+<td align="center"><button type="button" onclick=calci('=')>=</button></td>
+</tr>
+</table>
+</body>
+</html>
